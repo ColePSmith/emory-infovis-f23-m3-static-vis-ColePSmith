@@ -155,8 +155,8 @@ function displayEmory() {
     d3.select("body").selectAll(".poetry").remove();
     d3.select("body").selectAll(".percentage").remove();
     d3.select("body").selectAll(".dataOrigin").text("Emory University Poll");
-    makeBarPoetry(emData[0],1,"Support the APTF");
-    makeBarPoetry(emData[1],2,"Against the APTF");
+    makeBarPoetry(emData[0],1,"Support APTF Construction");
+    makeBarPoetry(emData[1],2,"Against APTF Construction");
     makeBarPoetry(emData[2],3,"Not Sure");
     sourceMaker("https://www.documentcloud.org/documents/23712765-buckhead_survey_public-1?responsive=1&title=1");
 
@@ -167,8 +167,8 @@ function displayAtl() {
     d3.select("body").selectAll(".poetry").remove();
     d3.select("body").selectAll(".percentage").remove();
     d3.select("body").selectAll(".dataOrigin").text("City of Atlanta Poll");
-    makeBarPoetry(AData[0],1,"Support the APTF");
-    makeBarPoetry(AData[1],2,"Against the APTF");
+    makeBarPoetry(AData[0],1,"Support APTF Construction");
+    makeBarPoetry(AData[1],2,"Against APTF Construction");
     makeBarPoetry(AData[2],3,"Not Sure");
     sourceMaker("https://www.11alive.com/article/news/politics/do-69-of-atlanta-residents-support-cop-city/85-a849e26d-7989-4dc8-821c-8cc9c3175b15");
 }
