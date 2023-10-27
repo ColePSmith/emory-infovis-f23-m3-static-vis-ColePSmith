@@ -177,8 +177,8 @@ function displayCouncil() {
     d3.select("body").selectAll(".poetry").remove();
     d3.select("body").selectAll(".percentage").remove();
     d3.select("body").selectAll(".dataOrigin").text("Atlanta City Council Vote");
-    makeBarPoetry(council[0],1,"Support the APTF");
-    makeBarPoetry(council[1],2,"Against the APTF");
+    makeBarPoetry(council[0],1,"Support APTF Construction");
+    makeBarPoetry(council[1],2,"Against APTF Construction");
     makeBarPoetry(council[2],3,"Not Sure");
     sourceMaker("https://www.nytimes.com/2023/06/06/us/atlanta-cop-city-funding-vote.html");
 }
