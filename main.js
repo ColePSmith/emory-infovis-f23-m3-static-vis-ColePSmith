@@ -183,6 +183,97 @@ function displayCouncil() {
     sourceMaker("https://www.nytimes.com/2023/06/06/us/atlanta-cop-city-funding-vote.html");
 }
 
+function displayPie() {
+    //d3.select("body").selectAll(".poetry").remove();
+    //d3.select("body").selectAll(".percentage").remove();
+    //d3.select("body").selectAll(".dataOrigin").text("Emory University Poll");
+    
+    svg
+        .append("path")
+        .attr("transform", "translate(1000,150)")
+        .attr("d", d3.arc()
+        .innerRadius( 50 )
+        .outerRadius( 75 )
+        .startAngle( 3.01 )     // It's in radian, so Pi = 3.14 = bottom.
+        .endAngle( 3.39 )       // 2*Pi = 6.28 = top
+        )
+        .attr('stroke', 'black')
+        .attr('fill', 'grey');
+
+    svg
+        .append("path")
+        .attr("transform", "translate(1000,150)")
+        .attr("d", d3.arc()
+        .innerRadius( 50 )
+        .outerRadius( 75 )
+        .startAngle( 0 )     // It's in radian, so Pi = 3.14 = bottom.
+        .endAngle( 3.01 )       // 2*Pi = 6.28 = top
+        )
+        .attr('stroke', 'black')
+        .attr('fill', 'white');
+
+    svg
+        .append("path")
+        .attr("transform", "translate(1000,150)")
+        .attr("d", d3.arc()
+        .innerRadius( 50 )
+        .outerRadius( 75 )
+        .startAngle( 3.39 )     // It's in radian, so Pi = 3.14 = bottom.
+        .endAngle( 6.28 )       // 2*Pi = 6.28 = top
+        )
+        .attr('stroke', 'black')
+        .attr('fill', 'black');
+
+    svg
+        .append("text")
+        .attr("class", "percentage")
+        .attr("text-anchor", "end")
+        .attr("transform", "translate(1000,250)")
+        .text("Support APTF Construction")
+        .attr('fill', 'black');
+
+        svg
+        .append("text")
+        .attr("class", "percentage")
+        .attr("text-anchor", "end")
+        .attr("transform", "translate(1000,290)")
+        .text("Not Sure")
+        .attr('fill', 'black');
+
+        svg
+        .append("text")
+        .attr("class", "percentage")
+        .attr("text-anchor", "end")
+        .attr("transform", "translate(1000,270)")
+        .text("Against APTF Construction")
+        .attr('fill', 'black');
+
+        svg
+        .append("rect")
+        .attr("width",15)
+        .attr("height",15)
+        .attr("transform", "translate(1010,254)")
+        .attr("stroke", "black")
+        .attr("fill", "black");
+
+        svg
+        .append("rect")
+        .attr("width",15)
+        .attr("height",15)
+        .attr("transform", "translate(1010,235)")
+        .attr("stroke", "black")
+        .attr("fill", "white");
+
+        svg
+        .append("rect")
+        .attr("width",15)
+        .attr("height",15)
+        .attr("transform", "translate(1010,275)")
+        .attr("stroke", "black")
+        .attr("fill", "grey");
+    
+}
+
 document.getElementById("forward-button").addEventListener("click", function(d){
     slide++;
     if(slide == 3){
@@ -211,6 +302,7 @@ document.getElementById("backward-button").addEventListener("click", function(d)
 });
 
 displayEmory();
+displayPie();
 
 //bonus:
 //figure out black rectangles covering em up and then retreating back deleting the texts
