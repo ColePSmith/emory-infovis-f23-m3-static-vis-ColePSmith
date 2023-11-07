@@ -13,17 +13,6 @@
     font-weight: bold;
 }
 
-footer {
-    position: fixed; /*force the footer to not move regardless of what else is going on on the page*/
-    bottom: 0; /* Make sure it stays at the bottom of the page */
-    background-color:  grey;
-    display: flex; /*need this to be a flex to work with justify-content/align-items*/
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-}
-
 .arrow-button {
     font-size: 10px;
     padding: 2px 10px;
@@ -44,7 +33,66 @@ footer {
     fill: grey;
 }
 
+.timePoint-hover {
+    fill:#2d2d2d;
+    r: 11;
+}
+
+.descrip {
+    font-family: "Courier";
+    font-size: 18px;
+    color: black;
+    fill: black;
+}
+
+.descrip-title {
+    font-family: "Courier";
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+}
+
+.descrip-source {
+    font-family: "Courier";
+    font-weight: bold;
+    font-size: 20px;
+    fill: black;
+}
+
+.descrip-source-hover {
+    font-family: "Courier";
+    font-weight: bold;
+    font-size: 21px;
+    fill: rgba(0, 0, 0, 0.845);
+}
+
 .xlabels {
     font-weight: bold;
     font-size: 14px;
+}
+
+.forbutton-hover {
+    font-size: 55px;
+}
+
+.backbutton-hover {
+    font-size: 55px;
+}
+
+.filter {
+    font-family: "Courier";
+    font-size: 20px;
+    fill: black;
+}
+
+.filter-hover {
+    font-family: "Courier";
+    font-size: 21px;
+    fill: black;
+}
+
+.filter-clicked {
+    font-family: "Courier";
+    font-weight: bold;
+    font-size: 22px;
 }
